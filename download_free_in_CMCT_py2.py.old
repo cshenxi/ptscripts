@@ -45,7 +45,6 @@ class Page():
     def __init__(self,url="",header={}):
         self.url = url
         self.header = header
-        self.torrent_list = []
         self.string_list = []
         
         # Getting the site url and cookie
