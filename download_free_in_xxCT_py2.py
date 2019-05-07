@@ -42,7 +42,6 @@ class Page():
     Getting a torrent page with all torrents in it
     '''
     def __init__(self):
-        self.torrent_list = []
         self.raw_list = []
         
         # Requesting page information of torrents by session
