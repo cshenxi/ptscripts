@@ -1,0 +1,93 @@
+import bs4
+import requests
+import re
+import os
+pattern = re.compile(r'(\w+).(\w{3}[?\w]+)=(\d+)')
+sign = 'free'
+site_name = "xxCT"
+site_url = "https://xxxxxx.org/torrents.php"
+site_cookie = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+passkey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+url_half = "https://xxxxxxxx.org/download.php?id="
+url_mid = "&passkey="
+url_last = "&https=1"
+
+#####
+class Torrents():
+    '''
+    Define a torrent
+    '''
+
+    def __init__(self,torrent):
+        self.torrent = torrent
+        
+    def __str__(self):
+        return '{}_{}.torrent'.format(site_name,self.torrent[0])
+    
+    def DL(self):
+        '''
+        A function to download a free torrent.
+        '''
+        down_url = url_half + self.torrent[0] + url_mid + passkey + url_last
+        if self.torrent[1]:
+            res = requests.get(down_url)
+            f = open(self.__str__(),'wb')
+            f.write(res.content)
+            f.close()
+        else:
+            pass
+#####
+class Page():
+    '''
+    Getting a torrent page with all torrents in it
+    '''
+    
+    def __init__(self,url="",header={}):
+        self.url = url
+        self.header = header
+        self.string_list = []
+        
+        # Getting the site url and cookie
+        self.url = site_url
+        cookie = site_cookie
+        self.header = {"cookie":cookie}
+        
+        # Requesting page information of torrents
+        res = requests.get(self.url,headers=self.header)
+        soup = bs4.BeautifulSoup(res.text,'lxml')
+        raw_list = soup.select('.torrentname')
+        
+        # Change raw_list into a string list
+        for raw in raw_list:
+            text = str(raw)
+            self.string_list.append(text)
+            
+    def __str__(self):
+        amount = len(self.string_list)
+        return "This page has {} torrents.".format(amount)
+    
+    def Free(self):
+        free_state = []
+        
+        # Check free and add states
+        for t in self.string_list:
+            
+            if sign in t:
+                results = re.search(pattern,t)
+                free_state.append((results.group(3),True))
+            else:
+                results = re.search(pattern,t)
+                free_state.append((results.group(3),False))
+                
+        return free_state
+#####
+task = Page()
+task_list = task.Free()
+#####
+for torrent in task_list:
+    torrent_name = Torrents(torrent).__str__()
+    if os.path.isfile(torrent_name) == False:
+        Torrents(torrent).DL()
+    else:
+        continue
+#####
