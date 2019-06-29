@@ -15,8 +15,8 @@ Update log:
   
   
   
-Usage shows below:
-用法如下，将根据注释进行解释：
+Usage shows below:  
+用法如下，将根据注释进行解释：  
   
   
 #### The requirements shows above, please use these commands to install the requirements in commandline. Using "sudo" in the case of meeting Permission problems.
@@ -24,3 +24,17 @@ Usage shows below:
 pip install bs4  
 pip install requests  
 pip install lxml  
+  
+  
+#### Complete the variables below:
+#### 完成下列的变量
+#### Some examples: 
+####site_name = "M-TEAM"
+####site_url = "https://tp.m-team.cc/torrents.php"
+####site_cookie = "c_lang_folder=cht; tp=I2ODOGYNDFmZDdASDASODU3ZDA1ZU3ZDAYxNDFmZDdhYWRhZmRlOA%3D%3D"
+####url_half = "https://tp.m-team.cc/"
+  
+site_name = "xxxxx"  
+site_url = "https://xxxxxxxxx/torrents.php"  
+site_cookie = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  
+#### 如何获取cookie请自行学习
