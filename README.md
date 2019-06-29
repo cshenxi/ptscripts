@@ -29,10 +29,10 @@ pip install lxml
 #### Complete the variables below:
 #### 完成下列的变量
 #### Some examples: 
-####site_name = "M-TEAM"
-####site_url = "https://tp.m-team.cc/torrents.php"
-####site_cookie = "c_lang_folder=cht; tp=I2ODOGYNDFmZDdASDASODU3ZDA1ZU3ZDAYxNDFmZDdhYWRhZmRlOA%3D%3D"
-####url_half = "https://tp.m-team.cc/"
+site_name = "M-TEAM"  
+site_url = "https://tp.m-team.cc/torrents.php"  
+site_cookie = "c_lang_folder=cht; tp=I2ODOGYNDFmZDdASDASODU3ZDA1ZU3ZDAYxNDFmZDdhYWRhZmRlOA%3D%3D"  
+url_half = "https://tp.m-team.cc/"  
   
 site_name = "xxxxx"  
 site_url = "https://xxxxxxxxx/torrents.php"  
