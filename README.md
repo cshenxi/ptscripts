@@ -54,7 +54,17 @@ is_gazelle = False
 #### 如果网站的种子下载地址，鼠标指上去发现跟种子ID无关，或不仅仅是种子ID，还带有加密hash之类的，需要设置成 True, 暂时发现的加密站为HDC，改成True后可用
 is_encrypted = False  
   
-#### 下面这几个现在不需要了
+#### 下面这个' url_last = ""  '现在不需要了
 #### Check the download url, especially when you are using a https(SSL) url.
 #### Some torrents' download pages url could be "https://tp.m-team.cc/download.php?id=xxxxx&https=1", in this case, you need to assign the variable of "url_last". Examples:url_last = "&https=1"
 url_last = ""  
+  
+  
+#### If you couldn't downlaod the torrents to your directory where the *.py script is, you could just define the variables below. Make sure the format of your path because of the difference between Windows and Linux.
+#### Example of windows:              monitor_path = r'C:\\Users\\DELL-01\\Desktop\\'       Don't forget the last '\\'
+#### Example of Linux and MacOS:      monitor_path = r'/home/user/Downloads/'               Don't forget the last '/'
+#### 设置一个目录，下载软件监控这个目录，目录里的种子自动添加。可以不设置，一般会下载到脚本所在目录，或用户家目录。
+#### win下和linux下的路径表达方式不同，注意区分。
+#### win下：   monitor_path = r'C:\\Users\\DELL-01\\Desktop\\'
+#### linux下： monitor_path = r'/home/user/Downloads/'
+monitor_path = r''  
