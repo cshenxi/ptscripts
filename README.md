@@ -10,13 +10,15 @@ Update log:
 2019/06/04
 1. Added some lines to ensure that the script could download torrents correctly.
 2. Added a new script to handle the encrypted torrent's download url.
-
-
-
+  
+  
+  
+  
+  
 Usage shows below:
 用法如下，将根据注释进行解释：
-
-
+  
+  
 #### The requirements shows above, please use these commands to install the requirements in commandline. Using "sudo" in the case of meeting Permission problems.
 #### 使用前请先在命令行中安装需要的包, 看情况选择要不要用sudo:
 pip install bs4  
