@@ -76,13 +76,13 @@ monitor_path = r''
 
 user_agent = ''
 
-# You don't need to define the variables shows below unless you couldn't download the torrents after defined the above one
-# 一般不需要定义下面的headers信息，下载失败再考虑完善
+ You don't need to define the variables shows below unless you couldn't download the torrents after defined the above one
+ 一般不需要定义下面的headers信息，下载失败再考虑完善
 referer = ''
 host = ''
 
-# You don't need to define the variables shows below unless you couldn't download the torrents after defined the above two
-# 优先级更低的headers信息
+ You don't need to define the variables shows below unless you couldn't download the torrents after defined the above two
+ 优先级更低的headers信息
 upgrade_insecure_requests = ''
 dnt = ''
 accept_language = ''
@@ -95,19 +95,19 @@ origin = ''
 accept_encoding = ''
 
 
-# Only if you just want to check the first 10 torrents is free in the page and download the free torrents in this small amount, please change it to 10
-# 网页一次刷新，首页的种子信息就都抓取了，如果你只想看网页前10条种子信息里有没有免费，就把这个变量设置成10，一般可以配合搜索功能使用
-# like: torrents_amount = 10
-# We always grab all the torrents in the whole page, but you can define the amount of grabing torrents by defining the variable below 
+ Only if you just want to check the first 10 torrents is free in the page and download the free torrents in this small amount, please change it to 10
+ 网页一次刷新，首页的种子信息就都抓取了，如果你只想看网页前10条种子信息里有没有免费，就把这个变量设置成10，一般可以配合搜索功能使用
+ like: torrents_amount = 10
+ We always grab all the torrents in the whole page, but you can define the amount of grabing torrents by defining the variable below 
 torrents_amount = 0
 
-# You don't need to change this variables unless you cannot download from your GAZELLE site
-# 这是gz架构的网站才看到的东西，一般不用管。不过很多gz站应该都不一样，想抓gz站，要改的东西就比较多了，不介绍了
-# check this value from the page source code
+ You don't need to change this variables unless you cannot download from your GAZELLE site
+ 这是gz架构的网站才看到的东西，一般不用管。不过很多gz站应该都不一样，想抓gz站，要改的东西就比较多了，不介绍了
+ check this value from the page source code
 colspan = '3'
 
-# You don't need to change this variables unless you cannot find free torrents correctly
-# 这些是用来找free和找种子信息的标签，一般的nexusPHP站不用动，HDC已经专门适配，也不需要动
+ You don't need to change this variables unless you cannot find free torrents correctly
+ 这些是用来找free和找种子信息的标签，一般的nexusPHP站不用动，HDC已经专门适配，也不需要动
 free_tag = 'pro_free'
 free_tag2 = 'pro_free2up'
 DIC_free_tag = 'torrent_label tooltip tl_free'
@@ -126,8 +126,8 @@ HDC_download_class_name = '.torrentdown_button'
 
 #####
 #####
-# Showing the main script below:
-# 下面是脚本中的主要执行部分，一般不用动，除非有特别的改动
+ Showing the main script below:
+ 下面是脚本中的主要执行部分，一般不用动，除非有特别的改动
 #####
 my_headers = get_my_headers(my_headers = {})
 
