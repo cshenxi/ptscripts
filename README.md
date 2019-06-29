@@ -38,3 +38,23 @@ site_name = "xxxxx"
 site_url = "https://xxxxxxxxx/torrents.php"  
 site_cookie = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  
 #### 如何获取cookie请自行学习
+  
+  
+
+#### It always would be the first part of your site, like: url_half = "https://tp.m-team.cc/"
+#### 一般来讲，这个变量就是你的网站的前半部分
+url_half = "https://xxxxxxxxxxxxxxxxx/"
+
+
+#### If your site is a Gazelle Site, please change this varible to True, like: is_gazelle = True
+#### 如果是Gazelle构架，需要改成“is_gazelle = True”，经查发现，JPOP还有需要改其他变量才能使用，PTP无法使用，暂时确定能用的gz网站只有DIC
+is_gazelle = False  
+  
+#### If the torrents' download url in your site were encrypted like HDC, please change this varible to True, like: is_encrypted = True
+#### 如果网站的种子下载地址，鼠标指上去发现跟种子ID无关，或不仅仅是种子ID，还带有加密hash之类的，需要设置成 True, 暂时发现的加密站为HDC，改成True后可用
+is_encrypted = False  
+  
+#### 下面这几个现在不需要了
+#### Check the download url, especially when you are using a https(SSL) url.
+#### Some torrents' download pages url could be "https://tp.m-team.cc/download.php?id=xxxxx&https=1", in this case, you need to assign the variable of "url_last". Examples:url_last = "&https=1"
+url_last = ""  
