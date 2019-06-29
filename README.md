@@ -19,6 +19,6 @@ Usage shows below:
 
 #### The requirements shows above, please use these commands to install the requirements in commandline. Using "sudo" in the case of meeting Permission problems.
 #### 使用前请先在命令行中安装需要的包, 看情况选择要不要用sudo:
-pip install bs4
-pip install requests
-pip install lxml
+pip install bs4  
+pip install requests  
+pip install lxml  
